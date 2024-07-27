@@ -1,23 +1,33 @@
-# About Me
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuji Itadori Waving Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
 
-👋 Hi there! I'm Leo.
+        .sprite {
+            width: 100px; /* Width of a single frame */
+            height: 100px; /* Height of a single frame */
+            background: url('yuji_sprite.png') left center;
+            background-size: cover;
+            animation: wave 1s steps(10) infinite; /* Adjust steps(10) based on the number of frames */
+        }
 
-## Interests
-- 🔬 Fascinated by the wonders of science and how it shapes our world
-- 💻 Enjoy exploring new technologies and programming
-- 📖 Avid reader of both fiction and non-fiction
-- 🌍 Always eager to learn about different cultures and languages
-
-## Skills
-- **Languages**: Proficient in English and Chinese
-- **Science**: Strong foundation in Biology, Physics, and Chemistry
-- **Mathematics**: Skilled in both Mathematics and Additional Mathematics
-
-## Projects
-- 💡 Working on various projects related to my studies and personal interests
-- 🌟 Always open to collaboration and learning from others
-
-## Get in Touch
-- 📫 Feel free to reach out to me via Discord
-
-Thanks for visiting my profile! Looking forward to connecting and sharing knowledge with you.
+        @keyframes wave {
+            from { background-position: 0; }
+            to { background-position: -1000px; } /* Adjust based on the total width of the sprite sheet */
+        }
+    </style>
+</head>
+<body>
+    <div class="sprite"></div>
+</body>
+</html>
